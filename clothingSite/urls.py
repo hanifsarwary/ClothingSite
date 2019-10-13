@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from RESTAPI.views import UserCreateViewSet
+from RESTAPI.views import UserCreateViewSet, GetClothings, GetPictures, CreateOrderDetail, CreateOrder, GetOrderDetails
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', UserCreateViewSet.as_view())
+    path('user/', UserCreateViewSet.as_view()),
+    path('cloths/', GetClothings.as_view()),
+    path('clothPictures/<int:cloth_id>/', GetPictures.as_view()),
+    path('createOrderDetail/', CreateOrderDetail.as_view()),
+    path('createOrder/', CreateOrder.as_view()),
+    path('getOrderDetails/<int:order_id>/', GetOrderDetails.as_view())
+
 ]
