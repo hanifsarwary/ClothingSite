@@ -17,7 +17,7 @@ class ClothingUnitSerializer(serializers.ModelSerializer):
         
 
 class ClothPictureSerializer(serializers.ModelSerializer):
-
+    
     class Meta:
         model = ClothPicture
         fields = '__all__'

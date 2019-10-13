@@ -25,9 +25,10 @@ class ClothingUnit(models.Model):
     name = models.CharField(max_length=200, default="kurta")
     article_number = models.CharField(max_length=200)
     price = models.FloatField(default=0)
+    created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.article_number
 
 
 class ClothPicture(models.Model):
