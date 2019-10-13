@@ -9,11 +9,22 @@ choices = (
     ("Blue", "Blue"),
 )
 
-class User(models.Model):
+class User(AbstractUser):
     """
     Customize django User functionality
     """
-    name = models.CharField(max_length=120, default="i am user")
+    contact_number = models.CharField(('Contact Number'), max_length=32)
+    email = models.EmailField(null=True, blank=True)
+    join_date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
+
+class Customer(models.Model):
+    """
+    Customize django User functionality
+    """
     contact_number = models.CharField(('Contact Number'), max_length=32)
     email = models.EmailField(null=True, blank=True)
     join_date = models.DateField(auto_now_add=True)
