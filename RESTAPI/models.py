@@ -53,7 +53,7 @@ class ClothPicture(models.Model):
 
 
 class Order(models.Model):
-    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     total_amount = models.FloatField(default=0)
     order_date = models.DateField(auto_now_add=True)
 
