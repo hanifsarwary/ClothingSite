@@ -46,7 +46,7 @@ class ClothingUnit(models.Model):
 class ClothPicture(models.Model):
     picture = models.FileField()
     color = models.CharField(choices=choices, max_length=100)
-    clothing = models.ForeignKey(ClothingUnit, on_delete=models.CASCADE)
+    clothing = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.color

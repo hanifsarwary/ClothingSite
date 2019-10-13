@@ -4,12 +4,12 @@ from rest_framework.views import APIView
 from RESTAPI.models import ClothingUnit, ClothPicture, Order, OrderDetail, User
 from RESTAPI.serializers import (ClothingUnitSerializer, ClothPictureSerializer,
                                  OrderDetailSerializer, OrderSerializer,
-                                 UserSerializer)
+                                 CustomerSerializer)
 
 
 class UserCreateViewSet(generics.ListCreateAPIView):
     
-    serializer_class = UserSerializer
+    serializer_class = CustomerSerializer
     queryset = User.objects.all()
 
 

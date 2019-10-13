@@ -1,11 +1,11 @@
-from RESTAPI.models import User, ClothingUnit, ClothPicture, Order, OrderDetail
+from RESTAPI.models import User, ClothingUnit, ClothPicture, Order, OrderDetail, Customer
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.ModelSerializer):
+class CustomerSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = User
+        model = Customer
         fields = '__all__'
 
     
