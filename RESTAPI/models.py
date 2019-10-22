@@ -25,6 +25,8 @@ class Customer(models.Model):
     """
     Customize django User functionality
     """
+    first_name = models.CharField(max_length=40, default="")
+    last_name = models.CharField(max_length=40, default="")
     contact_number = models.CharField(('Contact Number'), max_length=32)
     email = models.EmailField(null=True, blank=True)
     join_date = models.DateField(auto_now_add=True)
